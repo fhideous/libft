@@ -6,13 +6,13 @@
 #    By: fhideous <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/01 15:51:58 by fhideous          #+#    #+#              #
-#    Updated: 2020/11/09 21:23:05 by fhideous         ###   ########.fr        #
+#    Updated: 2020/11/10 15:22:22 by fhideous         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=libft.a
 
-SRC		= ft_memset.c ft_bzero.c  ft_strlen.c ft_memcpy.c ft_memccpy.c ft_memmove.c \
+SRCS		= ft_memset.c ft_bzero.c  ft_strlen.c ft_memcpy.c ft_memccpy.c ft_memmove.c \
 	ft_memchr.c ft_memcmp.c ft_strlen.c ft_strlcpy.c ft_strlcat.c ft_strchr.c \
 	ft_strrchr.c ft_strnstr.c ft_strncmp.c ft_atoi.c ft_isalnum.c ft_isalpha.c \
 	ft_isascii.c ft_isdigit.c ft_isprint.c \
@@ -20,25 +20,29 @@ SRC		= ft_memset.c ft_bzero.c  ft_strlen.c ft_memcpy.c ft_memccpy.c ft_memmove.c
 	ft_substr.c ft_strjoin.c ft_strtrim.c  ft_split.c ft_itoa.c ft_strmapi.c\
 	ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c\
 
-OBJS	=$(SRC:.c=.o)
+HDRS	=	libft.h
 
-HEADERS =libft.h
+OBJS	=	$(SRCS:.c=.o)
 
-RM	=rm -rf
+OBJS_B	=	$(SRCS_B:.c=.o)
 
-all: $(NAME)
+RM		=	rm -f
 
-$(NAME):	$(OBJS) 
-		gcc -Wall -Wextra -Werror -I $(HEADERS) -c $(SRC) 
-		ar rc $(NAME) $(OBJS)
-	@	ranlib $(NAME)
+all:	$(NAME)
+
+$(NAME):	$(OBJS)
+		ar	rcs	$(NAME)	$(OBJS)
+
+
+.c.o:
+		gcc -Wall -Wextra -Werror -I $(HDRS) -c $< -o $(<:.c=.o)
 
 clean:
-	@$(RM) $(OBJS)
+		$(RM) $(OBJS) 
 
-fclean: clean
-	@$(RM) $(NAME)
+fclean:	clean
+		$(RM) $(NAME)
 
-re: fclean all
+re:		fclean all
 
-.PHONY: all clean fclean re
+.PHONY:	all clean fclean re bonus
