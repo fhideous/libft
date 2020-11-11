@@ -6,7 +6,7 @@
 #    By: fhideous <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/01 15:51:58 by fhideous          #+#    #+#              #
-#    Updated: 2020/11/10 15:22:22 by fhideous         ###   ########.fr        #
+#    Updated: 2020/11/11 16:36:59 by fhideous         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,6 @@ all:	$(NAME)
 
 $(NAME):	$(OBJS)
 		ar	rcs	$(NAME)	$(OBJS)
-
 
 .c.o:
 		gcc -Wall -Wextra -Werror -I $(HDRS) -c $< -o $(<:.c=.o)

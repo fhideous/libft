@@ -6,22 +6,19 @@
 /*   By: fhideous <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/01 14:56:36 by fhideous          #+#    #+#             */
-/*   Updated: 2020/11/09 21:12:49 by fhideous         ###   ########.fr       */
+/*   Updated: 2020/11/11 19:10:53 by fhideous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-static void			all_free(char **text)
+static void			all_free(char **text, int len)
 {
-	int i;
-
-	i = 0;
-	while (text[i])
+	while (len)
 	{
-		free(text[i]);
-		i++;
+		free(text[len]);
+		len--;
 	}
 	free(text);
 }
@@ -42,7 +39,7 @@ static	char		**str_fill(char **strs, const char *s, int len, char c)
 		strs[i] = ft_substr(s, 0, str_len);
 		if (!strs[i])
 		{
-			all_free(strs);
+			all_free(strs, i - 1);
 			return (NULL);
 		}
 		s += str_len;
@@ -52,7 +49,7 @@ static	char		**str_fill(char **strs, const char *s, int len, char c)
 	return (strs);
 }
 
-int					lenofstr(char const *s, char c)
+static int			lenofstr(char const *s, char c)
 {
 	int i;
 	int len;
@@ -61,12 +58,12 @@ int					lenofstr(char const *s, char c)
 	len = 0;
 	while (s[i])
 	{
-		while (s[i] == c && s[i] != '\0')
+		while (s[i] && s[i] == c)
 			i++;
 		if (s[i] == '\0')
 			break ;
 		len++;
-		while (s[i] != c && s[i] != '\0')
+		while (s[i] && s[i] != c)
 			i++;
 		if (s[i] == '\0')
 			break ;
