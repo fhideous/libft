@@ -6,7 +6,7 @@
 /*   By: fhideous <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/01 14:06:46 by fhideous          #+#    #+#             */
-/*   Updated: 2020/11/09 19:36:36 by fhideous         ###   ########.fr       */
+/*   Updated: 2020/11/13 18:28:09 by fhideous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	if (s == NULL)
 		return (NULL);
-	if (start >= len)
+	if (start >= ft_strlen(s))
 	{
 		start = 0;
 		len = 0;

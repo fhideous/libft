@@ -58,12 +58,12 @@ static int			lenofstr(char const *s, char c)
 	len = 0;
 	while (s[i])
 	{
-		while (s[i] && s[i] == c)
+		while (s[i] != '\0' && s[i] == c)
 			i++;
 		if (s[i] == '\0')
 			break ;
 		len++;
-		while (s[i] && s[i] != c)
+		while (s[i] != '\0' && s[i] != c)
 			i++;
 		if (s[i] == '\0')
 			break ;

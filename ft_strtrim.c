@@ -6,7 +6,7 @@
 /*   By: fhideous <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/01 14:33:42 by fhideous          #+#    #+#             */
-/*   Updated: 2020/11/09 19:37:42 by fhideous         ###   ########.fr       */
+/*   Updated: 2020/11/13 18:16:54 by fhideous         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*str_trim;
 	int		it;
 
-	if (!s1 || !set)
+	if (!s1)
 		return (NULL);
 	len_beg_step = find2in1(s1, set, 1);
 	len_body = ft_strlen(s1);
