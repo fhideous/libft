@@ -1,17 +1,5 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: fhideous <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/01 14:06:46 by fhideous          #+#    #+#             */
-/*   Updated: 2020/11/13 18:28:09 by fhideous         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include <stdlib.h>
-#include "libft.h"
+#include "../git/headers/libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {

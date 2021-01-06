@@ -1,15 +1,3 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: fhideous <marvin@42.fr>                    +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2020/11/01 15:51:58 by fhideous          #+#    #+#              #
-#    Updated: 2020/11/11 16:36:59 by fhideous         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
 NAME	=libft.a
 
 SRCS		= ft_memset.c ft_bzero.c  ft_strlen.c ft_memcpy.c ft_memccpy.c ft_memmove.c \
@@ -23,8 +11,6 @@ SRCS		= ft_memset.c ft_bzero.c  ft_strlen.c ft_memcpy.c ft_memccpy.c ft_memmove.
 HDRS	=	libft.h
 
 OBJS	=	$(SRCS:.c=.o)
-
-OBJS_B	=	$(SRCS_B:.c=.o)
 
 RM		=	rm -f
 
