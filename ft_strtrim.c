@@ -1,5 +1,5 @@
 #include "stdlib.h"
-#include "../git/headers/libft.h"
+#include "libft.h"
 
 int		find2in1(char const *s1, char const *set, int i)
 {

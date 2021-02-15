@@ -1,4 +1,3 @@
-#include "../git/headers/libft.h"
 
 int		ft_tolower(int c)
 {

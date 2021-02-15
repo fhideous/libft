@@ -1,5 +1,5 @@
 #include <stdlib.h>
-#include "../git/headers/libft.h"
+#include "libft.h"
 
 static void			all_free(char **text, int len)
 {

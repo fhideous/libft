@@ -1,4 +1,4 @@
-#include "../git/headers/libft.h"
+#include "libft.h"
 
 static int		len_n(int n)
 {

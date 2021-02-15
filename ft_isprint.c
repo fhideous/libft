@@ -1,4 +1,4 @@
-#include "../git/headers/libft.h"
+#include "libft.h"
 
 int	ft_isprint(int c)
 {

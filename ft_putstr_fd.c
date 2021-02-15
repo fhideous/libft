@@ -1,5 +1,5 @@
 #include <unistd.h>
-#include "../git/headers/libft.h"
+#include "libft.h"
 
 void	ft_putstr_fd(char *s, int fd)
 {

@@ -1,4 +1,4 @@
-#include "../git/headers/libft.h"
+#include "libft.h"
 #include <stdlib.h>
 
 int		ft_len_n(int n)
