@@ -6,7 +6,6 @@
 typedef struct		s_list
 {
 	void				*data;
-	size_t				cont_size;
 	struct s_list		*next;
 }					t_list;
 
@@ -46,9 +45,11 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 
-t_list	*ft_lstnew(void *cont, size_t cont_size);
+t_list	*ft_lstnew(void *cont);
 int		ft_lstsize(t_list *lst);
 void	ft_lstadd_back(t_list **lst, t_list *new);
+void	ft_lstclear(t_list **lst, void (*del)(void*));
+
 
 #ifndef BUFFER_SIZE
 # define BUFFER_SIZE 12

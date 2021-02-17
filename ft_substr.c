@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include "libft.h"
 
+
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char *sub_str;
@@ -12,7 +13,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		start = 0;
 		len = 0;
 	}
-	sub_str = (char *)malloc(len + 1);
+	sub_str = (char *)malloc((len + 1) * sizeof(char));
 	if (!sub_str)
 		return (NULL);
 	ft_memcpy(sub_str, s + start, len);
